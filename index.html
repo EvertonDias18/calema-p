@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALEMA Closet</title>
+  <link rel="stylesheet" href="loja.css">
+  
+
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+    .product { border: 1px solid #ddd; padding: 10px; margin: 10px 0; }
+    img { max-width: 100px; margin-right: 10px; cursor: pointer; }
+    #image-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; justify-content: center; align-items: center; }
+    #image-modal img { max-width: 90%; max-height: 90%; }
+  </style>
+</head>
+<body>
+
+    
+
+<div style="background-color: #f8c4b4; color: #333; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+  <nav>
+  <a href="#home" style="margin: 0 20px; text-decoration: none; color: #333;">Home</a>
+  <a href="#shop" style="margin: 0 20px; text-decoration: none; color: #333;">Loja</a>
+    <a href="#contact" style="margin: 0 20px; text-decoration: none; color: #333;">Contato</a>
+  <a href="favoritos.html" style="margin: 0 20px; text-decoration: none; color: #333;">Favoritos</a>
+  <a href="carrinho.html" style="margin: 0 20px; text-decoration: none; color: #333;">Carrinho</a>
+</nav>
+  <div>
+    <a href="https://instagram.com/calema_closet" target="_blank" style="margin: 0 10px;">
+      <img src="instagram-icon.png" width="20" height="20">
+    </a>
+    <a href="https://facebook.com/calema_closet" target="_blank" style="margin: 0 10px;">
+      <img src="facebook-icon.png" width="20" height="20">
+    </a>
+    <a href="https://wa.me/351123456789" target="_blank" style="margin: 0 10px;">
+      <img src="whatsapp-icon.png" width="20" height="20">
+    </a>
+  </div>
+</div>
+
+<section class="products-section">
+  <h2>Produtos</h2>
+  <div class="carousel">
+    <button class="prev">⬅️</button>
+    <img src="images/img1.jpg" id="carousel-img">
+    <button class="next">➡️</button>
+  </div>
+</section>
+
+  <h1 style="font-family: 'Dancing Script', cursive; font-size: 48px; text-align: center; color: #a22c2c;">CALEMA Closet</h1>
+
+  
+
+  <div id="filters">
+    <select id="cat-filter">
+      <option value="">Todas Categorias</option>
+      <option>Mulher</option><option>Homem</option><option>Calçado</option>
+      <option>Acessórios</option><option>Malas</option><option>Beleza</option>
+    </select>
+    <select id="size-filter">
+      <option value="">Todos Tamanhos</option>
+      <option>XXS</option><option>XS</option><option>S</option><option>M</option>
+      <option>L</option><option>XL</option><option>XXL</option>
+      <option>32</option><option>34</option><option>36</option><option>38</option>
+      <option>40</option><option>42</option><option>44</option><option>46</option>
+      <option>48</option><option>50</option><option>52</option>
+      <option>Tamanho único</option>
+    </select>
+    <button id="apply-filters">Aplicar</button>
+  </div>
+  <div id="products"></div>
+
+  <div id="image-modal" onclick="this.style.display='none'">
+    <img id="modal-image" src="">
+  </div>
+
+
+  <script src="loja.js"></script>
+</body>
+</html>
